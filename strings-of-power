@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+
+    string input;
+    cin>>input;
+    char arr[input.length() + 1];
+    int c=0,ans=0;
+
+      for (int x = 0; x < sizeof(arr); x++) {
+        arr[x] = input[x];
+    }
+    
+     for(int i=0;i<=input.length() + 1;i++)
+    { if (arr[i]=='h'&&arr[i+1]=='e'&&arr[i+2]=='a'&&arr[i+3]=='v'&&arr[i+4]=='y')
+    {
+         for(int n=i+5;n<=input.length() + 1;n++)
+                if(arr[n]=='m'&&arr[n+1]=='e'&&arr[n+2]=='t'&&arr[n+3]=='a'&&arr[n+4]=='l')
+                ans+=1;
+    }
+    }
+    cout<<ans;
+    return 0;
+}
